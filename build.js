@@ -20,13 +20,13 @@ exec( "rm ./build/Release/sqlanywhere.node", function( error, out, err ) {
 	    config( "node-gyp configure", function( error, out ) {
 		if( error ) {
 		    console.log( error, out );
-		    console.log( "Error when executing node-gyp configure" );
+		    console.log( "Error when executing node-gyp configure: " + error.message );
 		    process.exit( -1 );
 		}
 		var build = require('child_process').exec;
 		build( "node-gyp build", function( error, out ) {
 		    if( error ) {
-			console.log( "Error when executing node-gyp configure" );
+			console.log( "Error when executing node-gyp configure: " + error.message );
 			process.exit( -1 );
 		    }
 		    db = require( "./lib/index" );
