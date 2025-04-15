@@ -2,7 +2,7 @@
   "author": "SQL ANYWHERE",
   "name": "@harps-ch/sqlanywhere",
   "description": "SQL Anywhere JavaScript Driver.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "repository": {
     "url": "https://github.com/harps-ch/node-sqlanywhere"
   },
