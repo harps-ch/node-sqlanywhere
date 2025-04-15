@@ -1240,6 +1240,8 @@ void init( Local<Object> exports )
     NODE_SET_METHOD( exports, "createConnection", Connection::NewInstance );
 }
 
-NODE_MODULE( DRIVER_NAME, init )
+NODE_MODULE_INIT() {
+    init(exports);
+}
 
 #endif //NODE_MAJOR_VERSION >= 12
